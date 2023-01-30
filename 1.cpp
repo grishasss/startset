@@ -18,7 +18,7 @@ using str = string;
 #define ff first
 #define ss second
 #define forn(i, n) for (int i = 0; i < (int)n; ++i)
-#define fast ios_base::sync_with_stdio(0); cin.tie(0)
+
 
 
 template<typename T>
@@ -98,7 +98,8 @@ const ll inf = 1e12;
 inline void run();
 
 signed main(){
-    fast;
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
     // cout << setprecision(10) << fixed;
     int tt;
     tt = 1;
@@ -113,5 +114,5 @@ signed main(){
 }
 
 inline void run(){
-    
+
 }
