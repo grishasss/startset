@@ -33,7 +33,11 @@ ostream& operator<< (ostream &other, const vector<T> &v) {
     return other;
 }
 
-#define o(a) << "[" << #a << ": " << a << "] "
+#ifdef HOME
+    #define o(a) << "[" << #a << ": " << a << "] "
+#else 
+    #define o(a) ;
+#endif
 
 struct debug{
     debug(){}
@@ -44,9 +48,7 @@ struct debug{
     }
     template<typename T> 
     debug& operator<<(const T &a){
-        #ifdef HOME
-            cerr << a;
-        #endif 
+        cerr << a;
         return *this;
     }
 };
@@ -56,6 +58,7 @@ struct debug{
 
 
 mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
+
 
 const int MOD = 1e9 + 7;
 const ld e = 1/1e10;
@@ -90,8 +93,7 @@ inline bool cmax(T& a , const T& b){
 
 
 
-const int maxn = 1e6;
-const ll inf = 1e12;
+
 
 
 
@@ -113,6 +115,10 @@ signed main(){
     return 0;
 }
 
-inline void run(){
 
+const int maxn = 1e6;
+const ll inf = 1e12;
+
+inline void run(){
+             
 }
